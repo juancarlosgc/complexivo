@@ -1,5 +1,6 @@
 package com.complexivo.hospital.model;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -33,13 +34,14 @@ public class Usuario {
 
     private Boolean usu_estado;
 
-    private Set<Rol> roles=new HashSet<>();
+    private Set<Rol> roles = new HashSet<>();
 
-    private Medico medico;
+    private Set<Medico>  medicos = new HashSet<>();
 
-    private Paciente paciente;
+    private Set<Paciente>  pacientes = new HashSet<>();
 
-    private PersonalAdministrativo personalAdministrativo;
+    private Set<PersonalAdministrativo> personalAdministrativo   = new HashSet<>();
+
 
 
     @Override
@@ -203,29 +205,30 @@ public class Usuario {
         this.roles = roles;
     }
 
-    public Medico getMedico() {
-        return medico;
+
+
+
+    public Set<Medico> getMedicos() {
+        return medicos;
     }
 
-    public void setMedico(Medico medico) {
-        this.medico = medico;
+    public void setMedicos(Set<Medico> medicos) {
+        this.medicos = medicos;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public Set<Paciente> getPacientes() {
+        return pacientes;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPacientes(Set<Paciente> pacientes) {
+        this.pacientes = pacientes;
     }
 
-    public PersonalAdministrativo getPersonalAdministrativo() {
+    public Set<PersonalAdministrativo> getPersonalAdministrativo() {
         return personalAdministrativo;
     }
 
-    public void setPersonalAdministrativo(PersonalAdministrativo personalAdministrativo) {
+    public void setPersonalAdministrativo(Set<PersonalAdministrativo> personalAdministrativo) {
         this.personalAdministrativo = personalAdministrativo;
     }
-
-
 }
